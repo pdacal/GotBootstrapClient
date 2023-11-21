@@ -1,78 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Game of Thrones</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
-  <style>
-  </style>
-</head>
-<body>
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary nav-item" data-bs-theme="dark" >
-    <div class="container-fluid ps-3 pe-3">
-      <a class="navbar-brand" href="#">
-        <img src="/img/logoGOTblanco.png" alt="GOT" width="100" height="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game of Thrones</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top bg-body-tertiary nav-item"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid ps-3 pe-3">
+        <a class="navbar-brand" href="#">
+          <img class="logo"
+            src="/img/logoGOTblanco.png"
+            alt="GOT"
+            width="100"
+            height="auto"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse nav-item"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Casas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Continentes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- corpo -->
+    <div class="container">
+      <h1>Game of Thrones</h1>
+      <h3>Personajes favoritos</h3>
+      <div class="row mt-4 justify-content-center align-items-center">
+        <!-- Brienne de Tarth te amo -->
+        <div class="col-4">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUlPwsl7IZOzDF0DrYTyJt21cXUjDzm4X7ZVpeHhzUcsj2ioq-"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Brienne de Tarth</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/07/13060617/Yara-Greyjoy2-201x300.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Asha Greyjoy</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="card" style="width: 18rem">
+            <img
+              class="card-img-top"
+              src="https://hips.hearstapps.com/hmg-prod/images/arya-1525952643.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">Arya Stark</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <!-- personajes -->
+      <div class ="container2">
+        <h1>Personajes</h1>
+        <div class="row">
+          <div class="col-4">
 
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse nav-item"  id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Casas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Continentes</a>
-          </li>
-          
-        </ul>
-
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
-  <!-- corpo -->
-  <div class="container">
-    <h1>Game of Thrones</h1>
 
-    <div class="row mt-4">
-<!-- Brienne de Tarth te amo -->
-      <div class="col-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUlPwsl7IZOzDF0DrYTyJt21cXUjDzm4X7ZVpeHhzUcsj2ioq-" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Brienne de Tarth</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
+    <footer
+      class="bg-body-tertiary text-center fixed-bottom text-white"
+      data-bs-theme="dark">
+        <div class="text-center p-3">tofu &#x263A; 2023 &#x2692;</div>
       </div>
-      <div class="col-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/07/13060617/Yara-Greyjoy2-201x300.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Asha Greyjoy</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-4">
-        <div class="card" style="width: 18rem;">
-          <img src="https://hips.hearstapps.com/hmg-prod/images/arya-1525952643.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Arya Stark</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
+    </footer>
 
-    </div>
-  </div>
-<script src="js/bootstrap.bundle.js"></script>
-</body>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+  </body>
 </html>

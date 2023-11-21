@@ -5,3 +5,15 @@ body{
   padding-left: 20px;
   padding-right: 20px;
 }
+
+/* para que as fotos teñan todas a mesa altura */
+.card-img-top {
+  width: 100%;
+  height: 35vw;
+  object-fit: cover;
+}
+.cartas{
+  width: 30%;
+  height: 35vw;
+  object-fit: cover;
+}
