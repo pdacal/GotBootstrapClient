@@ -22,7 +22,7 @@ fetch("https://thronesapi.com/api/v2/Characters")
         //card-title
         const cardTitle = document.createElement("h5")
         cardTitle.setAttribute("class", "card-title text-center")
-        cardTitle.innerText = json[i].firstName + " " + json[i].lastName
+        cardTitle.innerText = json[i].fullName
         //card-text
         const cardText = document.createElement("p")
         cardText.setAttribute("class", "card-text text-center")
@@ -31,14 +31,12 @@ fetch("https://thronesapi.com/api/v2/Characters")
         const cardFooter = document.createElement("div")
         cardFooter.setAttribute("class", "card-footer text-center")
         cardFooter.innerText = json[i].family
-
-
+        //coller contenedor no que se vai introducir
         const contenedor3 = document.getElementsByClassName("carta-personaje")[0]
-        
         //engadir ao cardBody
         cardBody.appendChild(cardTitle)
         cardBody.appendChild(cardText)
-        
+
         //engadir divCard
         divCard.appendChild(image)
         divCard.appendChild(cardBody)
