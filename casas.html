@@ -16,8 +16,7 @@
     >
       <div class="container-fluid ps-3 pe-3">
         <a class="navbar-brand" href="#">
-          <img
-            class="logo"
+          <img class="logo"
             src="/img/logoGOTblanco.png"
             alt="GOT"
             width="100"
@@ -41,18 +40,16 @@
         >
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="personajes.html">Personajes</a>
+                <a class="nav-link" href="personajes.html">Personajes</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="continentes.html">Continentes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#"
-                >Continentes</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="casas.html">Casas</a>
+              <a class="nav-link active" href="casas.html">Casas</a>
             </li>
           </ul>
         </div>
@@ -60,30 +57,32 @@
     </nav>
     <!-- CORPO -->
     <div class="container">
-      <h1>Game of Thrones</h1>
-      <h3>Mundo conocido</h3>
-      <div class="justify-content-center align-items-center mt-4 mb-4">
-        <img src="/img/continente.jpg" alt="known World" style="width: 100%" />
+        <h1>Game of Thrones <span class="badge text-bg-danger">New</span></h1>
+        <h3>Casas</h3>
+        <div class="justify-content-center align-items-center mt-4 mb-4">
+          <img src="https://www.teahub.io/photos/full/178-1784926_houses-of-game-of-thrones-principales-casas-de.jpg" alt="known World" style="width: 100%" />
+        </div>
+        <h1>Casas</h1>
+        <div
+          class="row mt-4 justify-content-center align-items-center casas">
+          <!-- Casas -->
+          <!-- TODO script para mostrar as casas -->
+        </div>
       </div>
-      <h1>Continentes</h1>
-      <div
-        class="row mt-4 justify-content-center align-items-center continentes">
-        <!-- continentes -->
-      </div>
-    </div>
-    <footer
-      class="bg-body-tertiary text-center text-white"
-      data-bs-theme="dark" style="position: fixed; bottom:0; width: 100%;">
-        <div class="text-center p-3">
-            <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="tofu" 
-            data-bs-content="Nome do meu usuario de Linux">tofu</button>
-             &#x263A; 
-            <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="2023" 
-            data-bs-content="Segundo ano do ciclo.">2023</button>
-             &#x2692;</div>
-    </footer>
+  </div>
+  <footer
+  class="bg-body-tertiary text-center text-white"
+  data-bs-theme="dark" style="position: fixed; bottom:0; width: 100%;">
+    <div class="text-center p-3">
+        <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="tofu" 
+        data-bs-content="Nome do meu usuario de Linux">tofu</button>
+         &#x263A; 
+        <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="2023" 
+        data-bs-content="Segundo ano do ciclo.">2023</button>
+         &#x2692;</div>
+</footer>
 
-    <script src="js/scriptContinentes.js"></script>
+    <script src="js/scriptCasas.js"></script>
     <script src="js/bootstrap.bundle.js"></script>
   </body>
 </html>

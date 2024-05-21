@@ -6,7 +6,9 @@
     <title>Game of Thrones</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
-    <style></style>
+    <style>
+
+    </style>
   </head>
   <body>
     <!-- navbar -->
@@ -43,7 +45,13 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="personajes.html">Personajes</a>
+              </li>
+            <li class="nav-item">
               <a class="nav-link" href="continentes.html">Continentes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="casas.html">Casas</a>
             </li>
           </ul>
         </div>
@@ -52,80 +60,116 @@
     <!-- CORPO -->
     <div class="container">
       <h1>Game of Thrones</h1>
-      <h3>Personajes favoritos</h3>
       <div class="row mt-4 justify-content-center align-items-center">
 
-        <!-- Brienne de Tarth te amo -->
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUlPwsl7IZOzDF0DrYTyJt21cXUjDzm4X7ZVpeHhzUcsj2ioq-"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Brienne de Tarth</h5>
-              <p class="card-text">
-                Única hija y heredera de Lord Selwyn Tarth, Señor de Castillo del Atardecer.
-                Excelente espadachina, musculosa, alta, honesta y leal aunque también testaruda y brusca.
-              </p>
+        <!-- corpo -->
+         <img style="width: 100%;" src="https://pixel.nymag.com/imgs/daily/vulture/2019/04/04/got-recap/02-got-seasons-recap-illo.w1100.h733.jpg" />
+         <div style="max-width: 50vh;" class="m-2">
+            <!-- TODO popover sobre os nomes de HBO + o escritor con inf basica -->
+            <h4 class="m-3 mt-5 text-center">La serie de 
+                <b>HBO</b> basada en los libros de <b>George R.R. Martin</b></h4>
+            <div class="m-3" >
+                <!-- CAROUSEL -->
+
+                <div id="carouselExampleCaptions" class="carousel slide">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="https://www.awebic.com/wp-content/uploads/2020/05/george-r-r-martin-game-of-thrones.png" 
+                        class="d-block w-100" alt="El escritor con Jon Nieve y Daenerys Targaryen">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>El escritor con Jon Nieve y Daenerys Targaryen</h5>
+                          <p>Jon Snow y Daenerys Targaryen dos de los grandes protagonistas de la serie.</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://images.hive.blog/p/24rqX9pG7ZxYECSWug2atvuATvLrfCMFN8vCLMaN5hnqYn1oLDwbAC9PrnxJSA1eTvevs3ok6K5zFNswi8xmSxqsyrhuBWejKZBGJ3iizVx4QnCeTnNN6faABoj1XAEbZ5j8rhkJ19iip6V1umhUPHYU7J7AETos6ufVXoAiDfZp3RDGZZ9FmGGKsHWptixedo6kLMpz6a9YHSeRVBXSMmRFu5ehWn?format=match&mode=fit" 
+                        class="d-block w-100" alt="casa Stark">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Miembros de la casa Stark</h5>
+                          <p>La casa Stark posee el reino que linda con el Muro</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="https://sm.ign.com/ign_latam/news/h/hbo-is-dev/hbo-is-developing-three-more-game-of-thrones-spin-offs_smyf.jpg" 
+                        class="d-block w-100" alt="dragon">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Daenerys con uno de los dragones</h5>
+                          <p>Los dragones tienen un importante cometido en la saga.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                <div class="mb-5 mt-5">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus tristique neque non interdum. 
+                   Morbi finibus lacinia tempor. Pellentesque at mauris consectetur, blandit nibh sit amet, vulputate orci. 
+                   Suspendisse vulputate vehicula finibus. Proin luctus diam nec auctor tempus. Nulla vitae ante rutrum, dignissim nulla at, 
+                   convallis velit. Morbi nec nisl ut libero dictum blandit. Aenean eget tincidunt magna, eget imperdiet augue. Cras tincidunt 
+                   dignissim purus, in dapibus purus ultricies sit amet. Phasellus mollis nibh magna, non lacinia mauris tempor ac. 
+                   Phasellus elit felis, egestas in semper ac, tempor ac dolor. Donec interdum lorem condimentum, ultrices dolor ut, elementum magna.</p>
+                    <p>
+                   Quisque volutpat imperdiet blandit. Sed vel sodales nisl. Nam tempor accumsan nisi, non tristique purus aliquet et. 
+                   Vivamus vel congue libero, ut hendrerit sem. Phasellus dapibus, tortor a dignissim lobortis, metus lorem scelerisque risus, 
+                   non lacinia purus purus non mi. Sed a nisi vitae risus semper porttitor. Nullam at volutpat odio. Sed consectetur volutpat 
+                   nisi ut dapibus.</p>
+                </div>
+                <br>
+                <h4 class="mb-3">Premios</h4>            
+                  <ul class="list-group ">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Ganados</div>
+                      </div>
+                      <span class="badge text-bg-primary rounded-pill">272</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                      <div class="ms-2 me-auto">
+                        <div class="fw-bold">Nominaciones</div>
+                      </div>
+                      <span class="badge text-bg-primary rounded-pill">757</span>
+                    </li>
+                  </ul>
+                  <br>
+                <h4 class="mb-3">Donde ver</h4>
+                <div class="dropdown" class="m-5">
+                    <a class="btn btn-warning dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <b>Plataformas</b>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="https://www.max.com/es/es">HBO MAX</a></li>
+                      <li><a class="dropdown-item" href="https://www.stremio.com">Stremio</a></li>
+                    </ul>
+                </div>
+                <br>
             </div>
-            <div class="card-footer text-center">Lady Brienne</div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/07/13060617/Yara-Greyjoy2-201x300.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Asha Greyjoy</h5>
-              <p class="card-text">
-                Asha Greyjoy es la única hija de Lord Balon Greyjoy y Lady Alannys Harla.
-                Joven audaz, de fuerte personalidad, ingenio rápido y carácter desafiante. 
-              </p>
-            </div>
-            <div class="card-footer text-center">Lady of the Iron Islands</div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://hips.hearstapps.com/hmg-prod/images/arya-1525952643.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Arya Stark</h5>
-              <p class="card-text">
-                Arya Stark es la segunda hija de Lord Eddard Stark y Lady Catelyn Tully. 
-                Independiente, ingeniosa y de fuerte carácter pese a su corta edad, hábil con las armas.
-              </p>
-            </div>
-            <div class="card-footer text-center">House Stark</div>
-          </div>
-        </div>
+         </div>
       </div>
-      <br />
-      <!-- personajes -->
-      <div id="container-personajes">
-        <h1>Personajes</h1>
-        <div class="row mt-4 justify-content-center align-items-center carta-personaje">
-          <!-- CARDS API -->
-        </div>
-      </div>
+
     </div>
   </div>
-    <footer
+    <!-- <footer
       class="bg-body-tertiary text-center text-white"
-      data-bs-theme="dark">
-        <div class="text-center p-3">tofu &#x263A; 2023 &#x2692;</div>
-    </footer>
+      data-bs-theme="dark" style="position: fixed; bottom:0; width: 100%;">
+        <div class="text-center p-3">
+            <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="tofu" 
+            data-bs-content="Nome do meu usuario de Linux">tofu</button>
+             &#x263A; 
+            <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="2023" 
+            data-bs-content="Segundo ano do ciclo.">2023</button>
+             &#x2692;</div>
+    </footer> -->
 
     <script src="js/script.js"></script>
     <script src="js/bootstrap.bundle.js"></script>

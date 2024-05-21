@@ -1,8 +1,18 @@
-fetch("https://thronesapi.com/api/v2/Continents")
+// activacion de popover
+document.addEventListener('DOMContentLoaded', function () {
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
+  });
+
+
+  //coller as casas
+  fetch("https://thronesapi.com/api/v2/Characters")
 .then(response => response.json())
 .then(json => {
   let i = 0;
-  json.forEach(continente => {
+  // adapatar aos personajes, sacnado family, e recollendo as que hai sen repetirse
+  //logo sacalas no html
+  json.forEach(personaje => {
     const contenedor = document.getElementsByClassName("continentes")[0]
     contenedor.innerHTML = json.map((continente) =>
     `<div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
@@ -20,10 +30,3 @@ fetch("https://thronesapi.com/api/v2/Continents")
   })
 })
 .catch(error => console.error(error))
-
-
-// activacion de popover
-document.addEventListener('DOMContentLoaded', function () {
-  const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-  const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl));
-});
