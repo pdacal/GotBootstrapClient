@@ -1,145 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game of Thrones</title>
-    <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="style.css" />
-    <style></style>
-  </head>
-  <body>
-    <!-- navbar -->
-    <nav
-      class="navbar navbar-expand-lg fixed-top bg-body-tertiary nav-item"
-      data-bs-theme="dark"
-    >
-      <div class="container-fluid ps-3 pe-3">
-        <a class="navbar-brand" href="#">
-          <img class="logo"
-            src="/img/logoGOTblanco.png"
-            alt="GOT"
-            width="100"
-            height="auto"
-          />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div
-          class="collapse navbar-collapse nav-item"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link " href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="personajes.html">Personajes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="continentes.html">Continentes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="casas.html">Casas</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- CORPO -->
-    <div class="container">
-      <h1>Game of Thrones</h1>
-      <h3>Personajes favoritos</h3>
-      <div class="row mt-4 justify-content-center align-items-center">
 
-        <!-- Brienne de Tarth te amo -->
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUlPwsl7IZOzDF0DrYTyJt21cXUjDzm4X7ZVpeHhzUcsj2ioq-"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Brienne de Tarth</h5>
-              <p class="card-text">
-                Única hija y heredera de Lord Selwyn Tarth, Señor de Castillo del Atardecer.
-                Excelente espadachina, musculosa, alta, honesta y leal aunque también testaruda y brusca.
-              </p>
-            </div>
-            <div class="card-footer text-center">Lady Brienne</div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game of Thrones</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #container {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary nav-item" data-bs-theme="dark">
+    <div class="container-fluid ps-3 pe-3">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="/img/logoGOTblanco.png" alt="GOT" width="100" height="auto" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-item" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link " href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="personajes.html">Personajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="continentes.html">Continentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="casas.html">Casas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- CORPO -->
+  <div class="container">
+    <h1>Game of Thrones</h1>
+    <h3>Personajes favoritos</h3>
+    <div class="row mt-4 justify-content-center align-items-center">
+
+      <!-- Brienne de Tarth te amo -->
+      <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <img class="card-img-top favs"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQUlPwsl7IZOzDF0DrYTyJt21cXUjDzm4X7ZVpeHhzUcsj2ioq-"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Brienne de Tarth</h5>
+            <p class="card-text">
+              Única hija y heredera de Lord Selwyn Tarth, Señor de Castillo del Atardecer.
+              Excelente espadachina, musculosa, alta, honesta y leal aunque también testaruda y brusca.
+            </p>
           </div>
-        </div>
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/07/13060617/Yara-Greyjoy2-201x300.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Asha Greyjoy</h5>
-              <p class="card-text">
-                Asha Greyjoy es la única hija de Lord Balon Greyjoy y Lady Alannys Harla.
-                Joven audaz, de fuerte personalidad, ingenio rápido y carácter desafiante. 
-              </p>
-            </div>
-            <div class="card-footer text-center">Lady of the Iron Islands</div>
-          </div>
-        </div>
-        <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4">
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top favs"
-              src="https://hips.hearstapps.com/hmg-prod/images/arya-1525952643.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Arya Stark</h5>
-              <p class="card-text">
-                Arya Stark es la segunda hija de Lord Eddard Stark y Lady Catelyn Tully. 
-                Independiente, ingeniosa y de fuerte carácter pese a su corta edad, hábil con las armas.
-              </p>
-            </div>
-            <div class="card-footer text-center">House Stark</div>
-          </div>
+          <div class="card-footer text-center">Lady Brienne</div>
         </div>
       </div>
-      <br />
-      <!-- personajes -->
-      <div id="container-personajes">
-        <h1>Personajes</h1>
-        <div class="row mt-4 justify-content-center align-items-center carta-personaje">
-          <!-- CARDS API -->
+      <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <img class="card-img-top favs"
+            src="https://prd-rteditorial.s3.us-west-2.amazonaws.com/wp-content/uploads/2017/07/13060617/Yara-Greyjoy2-201x300.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Asha Greyjoy</h5>
+            <p class="card-text">
+              Asha Greyjoy es la única hija de Lord Balon Greyjoy y Lady Alannys Harla.
+              Joven audaz, de fuerte personalidad, ingenio rápido y carácter desafiante.
+            </p>
+          </div>
+          <div class="card-footer text-center">Lady of the Iron Islands</div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-lg-4 col-md-6 col-sm-12 mt-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem">
+          <img class="card-img-top favs" src="https://hips.hearstapps.com/hmg-prod/images/arya-1525952643.jpg"
+            class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-center">Arya Stark</h5>
+            <p class="card-text">
+              Arya Stark es la segunda hija de Lord Eddard Stark y Lady Catelyn Tully.
+              Independiente, ingeniosa y de fuerte carácter pese a su corta edad, hábil con las armas.
+            </p>
+          </div>
+          <div class="card-footer text-center">House Stark</div>
         </div>
       </div>
     </div>
+    <br />
+    <!-- personajes -->
+    <div id="container-personajes">
+      <h1>Personajes</h1>
+      <div class="row mt-4 d-flex justify-content-center align-items-center carta-personaje mb-4">
+        <!-- characters API -->
+        <table id="table" data-toggle="table" data-pagination="true">
+          <!-- data-search="true" data-custom-search="customSearch" -->
+          <thead>
+            <tr>
+              <th data-field="image">Foto</th>
+              <th data-field="name">Nombre</th>
+              <th data-field="details">Detalles</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- data -->
+          </tbody>
+        </table>
+        <!-- MODAL -->
+        <div id="details"></div>
+      </div>
+    </div>
   </div>
-  <footer
-  class="bg-body-tertiary text-center text-white"
-  data-bs-theme="dark" style="position: fixed; bottom:0; width: 100%;">
+  </div>
+  <footer class="bg-body-tertiary text-center text-white" data-bs-theme="dark" style="width: 100%;">
     <div class="text-center p-3">
-        <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="tofu" 
+      <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="tofu"
         data-bs-content="Nome do meu usuario de Linux">tofu</button>
-         &#x263A; 
-        <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="2023" 
+      &#x263A;
+      <button type="button" class="btn btn-lg btn-light" data-bs-toggle="popover" data-bs-title="2023"
         data-bs-content="Segundo ano do ciclo.">2023</button>
-         &#x2692;</div>
-</footer>
+      &#x2692;
+    </div>
+  </footer>
 
-    <script src="js/scriptPersonajes.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-  </body>
+  <script src="js/scriptPersonajes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-table@1.22.6/dist/bootstrap-table.min.js"></script>
+  <script src="js/bootstrap.bundle.js"></script>
+</body>
+
 </html>
