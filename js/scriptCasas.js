@@ -17,18 +17,18 @@ async function getDataHouses() {
       let casas = [];
       json.forEach((personaje) => {
         //recoller casas
-        if(personaje.family.startsWith('House')){
+        if (personaje.family.startsWith("House")) {
           casas.push(personaje.family);
         }
-         i++;
+        i++;
       });
       //Eliminar duplicados
-      casas = [... new Set(casas)];
+      casas = [...new Set(casas)];
       //eliminar errata Lanister
-      casas = casas.filter(casa => casa !== 'House Lanister');
+      casas = casas.filter((casa) => casa !== "House Lanister");
       // establecer cards e engadir elementos no html
       let j = 1;
-      casas.forEach(casa => {
+      casas.forEach((casa) => {
         //col4
         const columna = document.createElement("div");
         columna.setAttribute(
@@ -42,7 +42,7 @@ async function getDataHouses() {
         //imagen
         const image = document.createElement("img");
         image.setAttribute("class", "card-img-top cartas");
-        image.setAttribute("src", 'img/House' + j + '.jpg');
+        image.setAttribute("src", "img/House" + j + ".jpg");
         image.setAttribute("style", "width: 18rem; height: 18rem"); //ou 33rem
         //card-body
         const cardBody = document.createElement("div");
@@ -61,9 +61,8 @@ async function getDataHouses() {
         columna.appendChild(divCard);
         //engadir ao div principal
         contenedor.appendChild(columna);
-        j++
-      })
-      
+        j++;
+      });
     })
     .catch((error) => console.error(error));
 }

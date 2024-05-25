@@ -66,77 +66,100 @@
 
 //     .catch((error) => console.error(error));
 // }
-// TABOA
-async function getDataCharacters() {
-  //asincrono
-  await fetch("https://thronesapi.com/api/v2/Characters")
-    .then((response) => response.json())
-    .then((json) => {
-      let i = 0;
-      json.forEach((personaje) => {
-        const table = document.getElementById("table");
-        const tbody = document.createElement("tbody");
-        // tr
-        const tr = document.createElement("tr");
-        // tds:
-        //foto
-        const tdFoto = document.createElement("td");
-        const img = document.createElement("img");
-        img.setAttribute("src", json[i].imageUrl);
-        img.setAttribute("class", "rounded m-2");
-        img.setAttribute("alt", json[i].fullName);
-        img.setAttribute(
-          "style",
-          "width: 15rem; height: 15rem;object-fit: cover;"
-        );
-        // nome
-        const tdNome = document.createElement("td");
-        tdNome.innerText = json[i].fullName;
-        // boton
-        const tdBoton = document.createElement("td");
-        const buttonDetails = document.createElement("button");
-        buttonDetails.setAttribute("id", "buttonDetails");
-        buttonDetails.setAttribute("type", "button");
-        buttonDetails.setAttribute("class", "btn btn-info");
-        const id = json[i].id;
-        buttonDetails.addEventListener('click', () => popUpDetails(id))
-        // buttonDetails.setAttribute("onclick", `popUpDetails(${json[i].id})`)
-        buttonDetails.innerText = "Detalles";
-        // encadear -> td + contido
-        tdFoto.appendChild(img);
-        tdBoton.appendChild(buttonDetails);
-        // tr + tds
-        tr.appendChild(tdFoto);
-        tr.appendChild(tdNome);
-        tr.appendChild(tdBoton);
-        // tbody +tr
-        tbody.appendChild(tr);
-        table.appendChild(tbody);
-        i++;
-      });
-    })
 
-    .catch((error) => console.error(error));
+// TABOA
+// async function getDataCharacters() {
+//   //asincrono
+//   await fetch("https://thronesapi.com/api/v2/Characters")
+//     .then((response) => response.json())
+//     .then((json) => {
+//       let i = 0;
+//       json.forEach((personaje) => {
+//         const table = document.getElementById("table");
+//         const tbody = document.createElement("tbody");
+//         // tr
+//         const tr = document.createElement("tr");
+//         // tds:
+//         //foto
+//         const tdFoto = document.createElement("td");
+//         const img = document.createElement("img");
+//         img.setAttribute("src", json[i].imageUrl);
+//         img.setAttribute("class", "rounded m-2");
+//         img.setAttribute("alt", json[i].fullName);
+//         img.setAttribute(
+//           "style",
+//           "width: 15rem; height: 15rem;object-fit: cover;"
+//         );
+//         // nome
+//         const tdNome = document.createElement("td");
+//         tdNome.innerText = json[i].fullName;
+//         // boton
+//         const tdBoton = document.createElement("td");
+//         const buttonDetails = document.createElement("button");
+//         buttonDetails.setAttribute("id", "buttonDetails");
+//         buttonDetails.setAttribute("type", "button");
+//         buttonDetails.setAttribute("class", "btn btn-info");
+//         const id = json[i].id;
+//         buttonDetails.addEventListener('click', () => popUpDetails(id))
+//         buttonDetails.innerText = "Detalles";
+//         // encadear -> td + contido
+//         tdFoto.appendChild(img);
+//         tdBoton.appendChild(buttonDetails);
+//         // tr + tds
+//         tr.appendChild(tdFoto);
+//         tr.appendChild(tdNome);
+//         tr.appendChild(tdBoton);
+//         // tbody +tr
+//         tbody.appendChild(tr);
+//         table.appendChild(tbody);
+//         i++;
+//       });
+//     })
+
+//     .catch((error) => console.error(error));
+// }
+
+async function getDataCharacters() {
+  try {
+    const response = await fetch("https://thronesapi.com/api/v2/Characters");
+    const characters = await response.json();
+    // Preparar datos para introducilos como data na bootstrap-table(plugin)
+    const data = characters.map((character) => ({
+      image: `<img src="${character.imageUrl}" class="rounded" alt="${character.fullName}" style="width: 8rem; height: 8rem; object-fit: cover;">`,
+      name: character.fullName,
+      details: `<button type="button" class="btn btn-info" data-toggle="modal" data-target="#details" onclick="popUpDetails(${character.id})">Detalles</button>`,
+    }));
+    console.log(data);
+    // ponher os datos na data da taboa
+    $("#table").bootstrapTable({
+      data: data,
+    });
+    // que cargue os datos
+    $("#table").bootstrapTable("load", data);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 getDataCharacters();
 
-async function popUpDetails(id){
+async function popUpDetails(id) {
   // recoller persoaxe da api + crear modal + introducir datos personaje en modal
-  await  fetch(`https://thronesapi.com/api/v2/Characters/${id}`).then(response => response.json())
-  .then((pers) => {
-    const div = document.getElementById("details");
-    div.innerHTML = `
+  await fetch(`https://thronesapi.com/api/v2/Characters/${id}`)
+    .then((response) => response.json())
+    .then((pers) => {
+      const div = document.getElementById("details");
+      div.innerHTML = `
     <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h3 class="modal-title">Detalles <b class="text-primary">${pers.fullName}</b></h3>
+            <h3 class="modal-title">Detalles de <b class="text-primary">${pers.fullName}</b></h3>
           </div>
           <div class="modal-body">
           <!--Corpo do modal -->
           <div class="col text-center">
-          <img src="${pers.imageUrl}" class="img-fluid rounded m-3" alt="${pers.fullName}">
+          <img src="${pers.imageUrl}" class="rounded m-3" alt="${pers.fullName}" style="width: 15rem">
           </div>
           <div class="col">
           <ul class="list-group">
@@ -172,29 +195,27 @@ async function popUpDetails(id){
             </li>
             <li class="list-group-item d-flex justify-content-between align-items-start">
               <div class="ms-2 me-auto">
-              <div class="fw-bold">URL Imagen</div>
-              ${pers.imageUrl}
+              <div class="fw-bold " >URL Imagen</div>
+              <p class="break-all">${pers.imageUrl}</p>
               </div>
             </li>
           </ul>
           </div>            
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><b class="text-white">X</b></button>
+            <button type="button" class="btn btn-close" data-bs-dismiss="modal"></button>
           </div>
         </div>
       </div>
     </div>
   `;
-  })
-  
+    });
 
-  // Initialize and show the modal
+  // activar modal
   const modalElement = document.getElementById("modalDetails");
   const modal = new bootstrap.Modal(modalElement);
   modal.show();
 }
-
 
 // activacion de popover
 document.addEventListener("DOMContentLoaded", function () {
@@ -206,7 +227,3 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 });
 
-// VISTA DETALLE PERSONAXES POP UP
-// PAXINACIO
-// SOLUCION FOOTER EN VISTA DETALLE
-// VISTA MOVIL PERDESE, PROBAR EN CRHOME
