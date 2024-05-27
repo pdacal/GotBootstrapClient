@@ -129,7 +129,6 @@ async function getDataCharacters() {
       name: character.fullName,
       details: `<button type="button" class="btn btn-info" data-toggle="modal" data-target="#details" onclick="popUpDetails(${character.id})">Detalles</button>`,
     }));
-    console.log(data);
     // ponher os datos na data da taboa
     $("#table").bootstrapTable({
       data: data,
