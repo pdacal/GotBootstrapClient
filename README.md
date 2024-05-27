@@ -1,7 +1,12 @@
  # GotBootstrapClient
 
- ## Website de Game of Thrones (titulo)
+ ## Website de Game of Thrones
 
- **Personajes(lista)**
- - Daenerys
- - John Snow
+ **Páxinas**
+ -Home
+ -Personaxes
+ -Continentes
+ -Casas
+
+ API https://thronesapi.com/
+
