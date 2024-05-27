@@ -1,13 +1,21 @@
  # GotBootstrapClient
 
  ## Website de Game of Thrones
+ Autora: Paula Dacal.
+ 
+ Páxina cliente que utiliza unha API de xogo de tronos ( https://thronesapi.com/)
+ 
 
- **Páxinas**
- -Home
- -Personaxes
- -Continentes
- -Casas
+ **Páxinas:**
+ - Home
+ - Persoaxes
+ - Continentes
+ - Casas
+ 
+ Acceso á web mediante GitHub Pages:
+ 
+ https://pdacal.github.io/GotBootstrapClient/index.html 
 
- API https://thronesapi.com/
- Acceso á web: https://pdacal.github.io/GotBootstrapClient/index.html (GitHub Pages)
+
+
 
